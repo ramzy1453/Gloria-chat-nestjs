@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  gloria-db:
+    image: postgres:13
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: gloria-db
+      POSTGRES_PASSWORD: theislamiccaliphatewillreturn
+      POSTGRES_DB: perglores
+    networks:
+      - dev-network
+networks:
+  dev-network:
