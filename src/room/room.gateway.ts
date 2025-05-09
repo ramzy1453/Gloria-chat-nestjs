@@ -34,7 +34,6 @@ export class RoomGateway
     client: Socket,
     [name, description, accessToken, image]: [string, string, string, Buffer],
   ) {
-    console.log('nkc', image);
 
     const { userId } = await this.authService.verifyToken(accessToken);
     const room = await this.roomService.createRoom(name, userId, image);
